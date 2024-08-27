@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Container-->
+    <div class="container">
+
+        <!-- Header-->
+        <header>
+            <!-- Logo -->
+            <div>
+                <img src="/img/Logo.png" alt="logo alura" srcset="">
+            </div>
+        </header>
+
+        <!-- Main -->
+        <main>
+            <!-- Text input -->
+            <section class="main--text-input">
+                <textarea
+                    id="text"
+                    autofocus
+                    onkeyup="heightArea()"
+                    placeholder="Ingrese el texto aqui"
+                ></textarea>
+                <img 
+                    src="/img/diamod.png"
+                    alt="clear"
+                    id="areaClearX"
+                    class="areaClearX"
+                    onclick="areaClear()"
+                >
+            </section>
+
+            <!-- Buttons -->
+            <section class="main--buttons">
+                <div class="alert">
+                    <img src="/img/Caution.svg" alt="caution" srcset="">
+                    <p>Solo letras minúsculas y sin acentos</p>
+                </div>
+
+                <div class="buttons">
+                    <button class="encriptar" id="encriptar" onclick="encriptar()">
+                        Encriptar
+                    </button>
+                    <button class="desencriptar" id="desencriptar" onclick="desencriptar()">
+                        Desencriptar
+                    </button>
+                </div>
+            </section>
+
+            <!-- Text transforms -->
+            <section class="main--text-transforms">
+                <div class="emptymessage" id="emptymessage">
+                    <img src="/img/Muñeco.png" alt="" srcset="">
+    
+                    <span>
+                        Ningún mensaje fue encontrado
+                    </span>
+    
+                    <p>
+                        Ingresa el texto que desees encriptar o desencriptar.
+                    </p>
+                </div>
+    
+                <div class="main--text-transforms-area" id="texttransform_area">
+                    <div class="texttransform" id="texttransform"></div>
+                    <button onclick="clipboardRun()">
+                        <img src="" alt="clipboard" class="img">
+                        Copiar
+                    </button>
+                    <img 
+                        src="/img/Caution.svg"
+                        alt=""
+                        class="closeX"
+                        onclick="closeX()"
+                    >
+                </div>
+            </section>
+        </main>
+
+        <div class="warning" id="warning" onclick="closeWarning()">
+            <p>
+                <img src="/img/Caution.svg" alt="">
+                El texto ingresado debe ser solo en minúsculas y sin acentos.
+            </p>
+        </div>
+        
+    </div>
+    <!-- /END/ Container-->
+
+    <footer>
+        <p>Santiago V</p>
+    </footer>
+
+    <script src="scp.js"></script>
+</body>
+</html>
